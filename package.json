@@ -1,0 +1,19 @@
+{
+  "scripts": {
+    "prepare": "husky install",
+    "lint": "markdownlint-cli2 articles/**/*.md",
+    "format": "prettier --write articles/**/*.md"
+  },
+  "lint-staged": {
+    "*.md": [
+      "markdownlint-cli2",
+      "prettier --write"
+    ]
+  },
+  "devDependencies": {
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.1",
+    "markdownlint-cli2": "^0.6.0",
+    "prettier": "3.0.0-alpha.6"
+  }
+}
